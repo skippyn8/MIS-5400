@@ -1,0 +1,43 @@
+<!doctype html>
+<title>Ritz Theater API</title>
+<link rel=stylesheet type=text/css href="{{ url_for('static', filename='style.css') }}">
+<div class=page>
+  <h1>Ritz Theater API Documentation</h1>
+  <p>Here you will find information on using the Ritz Theater Ticket Sales api.</p>
+  <p>The data for this project is stored in the RitzSales database.
+    <br />It consists of the ticket, employee and concessions sales information for the Ritz Theater for several months in 2017 and 2018.<br />
+    <h2>ADDING Data</h2>
+    <b>POST /api/rs/sales/tickets</b> - Add a new ticket sales record to the database <br />
+	<b>POST /api/rs/sales/concession</b> - Add a new concession sales record to the database <br />
+	<b>POST /api/rs/sales/employee</b> - Add a new employee record to the database <br />
+	<b>POST /api/rs/sales/feature</b> - Add a new feature record to the database <br />
+	<b>POST /api/rs/sales/sales</b> - Add a new sales record to the database <br />
+    <br /> <br />
+    <h2>GETTING Data</h2>
+    <b>GET /api/rs/sales/tickets</b> - Get all (up to 1,000 rows) from the Ticket_Sales table in the database.<br />
+	<b>GET /api/rs/sales/tickets</b> - Get all records from the Ticket_Sales table in the database.<br />
+	<b>GET /api/rs/sales/tickets/gross_id</b> - Get a single record by ID from the Ticket_Sales table in the database.<br />
+	<b>GET /api/rs/sales/concession</b> - Get all records from the Concession_Sales table in the database.<br />
+	<b>GET /api/rs/sales/concession/con_id</b> - Get a single record by ID from the Concession_Sales table in the database.<br />
+	<b>GET /api/rs/sales/employee</b> - Get all records from the Employee table in the database.<br />
+    <b>GET /api/rs/sales/employee/emp_id</b> - Get a specific employee from the database by emp_id <br />
+	<b>GET /api/rs/sales/feature</b> - Get all records from the Feature table in the database.<br />
+    <b>GET /api/rs/sales/feature/feature_id</b> - Get a specific feature from the database by feature_id <br />
+	<b>GET /api/rs/sales/sales</b> - Get all records from the Sales table in the database.<br />
+	<b>GET /api/rs/sales/bo_report</b> - Get all records from the BoxOfficeReports view in the database.<br />
+	<b>GET /api/rs/sales/bo_report/show_title/show_date</b> - Get all records from the BoxOfficeReports view in the database for a single date.<br />
+	<b>GET /api/rs/sales/bo_report/show_title/first_date-last_date</b> - Get records for a single show from the BoxOfficeReports view in the database for a date range.<br />
+	<b>GET /api/rs/sales/bo_report/show_title</b> - Get all records from the BoxOfficeReports view in the database for a single title.<br />
+	<b>GET /api/rs/sales/bo_report/rating</b> - Get all records from the BoxOfficeReports view in the database for a specific rating.<br />
+	<b>GET /api/rs/sales/bo_report/distributor</b> - Get all records from the BoxOfficeReports view in the database for a single distributor.<br />
+	<b>GET /api/rs/sales/total_sales</b> - Get all records from the TotalSales view in the database.<br />
+	<b>GET /api/rs/sales/sales_by_date</b> - Get all records from the SalesByDate view in the database.<br />
+	<b>GET /api/rs/sales/CandySalesByDate</b> - Get all records from the CandySalesByDate view in the database.<br />
+    <br /> <br />
+    <h2>DELETING Data</h2>
+	<h2>Deleting should not be done under any circumstance. It is a violation of the database rules!</h2>
+    <b>DELETE /api/rs/sales/employee/emp_id</b> - Delete single row from the Employee table by emp_id <br />
+	<b>DELETE /api/rs/sales/tickets/gross_id</b> - Delete single row from the Ticket_Sales table by gross_id <br />
+	<b>DELETE /api/rs/sales/concession/con_id</b> - Delete single row from the Concession_Sales table by con_id<br />
+	<b>DELETE /api/rs/sales/feature/feature_id</b> - Delete single row from the Feature table by feature_id <br />
+</div>
